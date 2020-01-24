@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+:root {
+  --navbar-color: rgba(228, 176, 99, 0.9);
+  --navbar-green: rgb(135, 235, 168);
+  --navbar-items: #fffffd;
+  --navbar-hover: #706f6f;
+}
+
+.navbar {
+  box-shadow: 2px 2px 2px #3f3e3e;
+  opacity: 0.95;
+}
+/* NAV BAR SETTINGS */
+.bg-dark {
+  background-color: var(--navbar-color) !important;
+}
+
+.navbar-brand,
+.nav-link {
+  color: var(--navbar-items) !important;
+}
+.active > .nav-link {
+  color: var(--navbar-green) !important;
+  border-bottom: 3px solid;
+}
+
+.nav-link:hover {
+  color: var(--navbar-hover) !important;
+}
+
+/* FOOTER */
+#footer {
+  font-size: 1.5rem;
+  min-height: 3rem;
+  background-color: var(--navbar-color);
+  text-align: center;
+  color: white;
+}
+
+/* HOME PAGE */
+#home {
+  background-color: rgba(227, 211, 198, 0.851);
+}
+.custom-display {
+  font-size: 4rem;
+}
+.header-list {
+  list-style-type: none;
+}
+.fa-check {
+  color: var(--navbar-green);
+}
+
+/* HOW-DOES-THIS-WORK */
+#how-does-it-work {
+  background: url(/img/Cooking1.jpeg);
+  background-position: 0;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  min-height: 400px;
+}
+/* WHAT WILL YOU LEARN */
+.btn-outline-primary {
+  border-color: var(--navbar-color);
+  color: var(--navbar-color);
+}
+.btn-outline-primary:hover {
+  border-color: var(--navbar-color);
+  background-color: var(--navbar-color);
+}
+/* important tag overrules bootstrap in this case */
+.btn-outline-primary:active {
+  border-color: rgba(228, 176, 99, 0.9) !important;
+  background-color: rgba(210, 144, 47, 0.9) !important;
+}
+
+/* RECIPES PAGE */
+.header-list-recipes {
+  font-size: 1.5em;
+  list-style-type: none;
+}
+.card {
+  border-radius: 5px;
+}
+.card-img {
+  border-radius: 5px;
+}
+.card-background-odd {
+  background-color: rgb(147, 238, 193);
+}
+.card-background-even {
+  background-color: rgb(244, 166, 137);
+}
+/*  */
