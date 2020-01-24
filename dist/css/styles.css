@@ -50,7 +50,7 @@
 .custom-display {
   font-size: 4rem;
 }
-.header-list {
+.list {
   list-style-type: none;
 }
 .fa-check {
@@ -59,7 +59,7 @@
 
 /* HOW-DOES-THIS-WORK */
 #how-does-it-work {
-  background: url(/img/Cooking1.jpeg);
+  background: url(../img/Cooking1.jpeg);
   background-position: 0;
   background-size: cover;
   background-attachment: fixed;
