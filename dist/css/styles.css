@@ -33,14 +33,14 @@
 .nav-link:hover {
   color: var(--navbar-hover) !important;
 }
-
 /* FOOTER */
 #footer {
   font-size: 1.5rem;
-  min-height: 3rem;
+  height: 3rem;
   background-color: var(--navbar-color);
   text-align: center;
   color: white;
+  padding-bottom: 0;
 }
 
 /* HOME PAGE */
