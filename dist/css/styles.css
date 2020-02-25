@@ -12,10 +12,16 @@
   --navbar-hover: #706f6f;
 }
 
+body {
+  background-color: #333;
+}
+
 .navbar {
   box-shadow: 2px 2px 2px #3f3e3e;
   opacity: 0.95;
 }
+
+/* --------------------------------------------------------------------------- */
 /* NAV BAR SETTINGS */
 .bg-dark {
   background-color: var(--navbar-color) !important;
@@ -24,39 +30,53 @@
 .navbar-brand,
 .nav-link {
   color: var(--navbar-items) !important;
+  transition: .3s ease;
 }
-.active > .nav-link {
-  color: var(--navbar-green) !important;
-  border-bottom: 3px solid;
+
+.active {
+  border-bottom: 3px solid var(--navbar-green);
 }
 
 .nav-link:hover {
-  color: var(--navbar-hover) !important;
+  color: var(--navbar-green) !important;
 }
+
+/* --------------------------------------------------------------------------- */
 /* FOOTER */
 #footer {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-self: center;
+  justify-content: center;
   font-size: 1.5rem;
   height: 3rem;
   background-color: var(--navbar-color);
-  text-align: center;
   color: white;
   padding-bottom: 0;
 }
 
+/* --------------------------------------------------------------------------- */
 /* HOME PAGE */
 #home {
   background-color: rgba(227, 211, 198, 0.851);
 }
+
 .custom-display {
   font-size: 4rem;
 }
+
 .list {
   list-style-type: none;
 }
+
 .fa-check {
   color: var(--navbar-green);
 }
 
+/* --------------------------------------------------------------------------- */
 /* HOW-DOES-THIS-WORK */
 #how-does-it-work {
   background: url(../img/Cooking1.jpeg);
@@ -66,36 +86,54 @@
   background-repeat: no-repeat;
   min-height: 400px;
 }
-/* WHAT WILL YOU LEARN */
+
+/* --------------------------------------------------------------------------- */
+/* buttons */
+.btn-primary {
+  border-color: rgb(228, 176, 99);
+  background-color: rgb(228, 176, 99);
+}
+
+.btn-primary:hover {
+  border-color: rgb(210, 144, 47);
+  background-color: rgb(210, 144, 47);
+}
+
+.btn-primary:active {
+  border-color: rgb(228, 176, 99) !important;
+  background-color: rgb(210, 144, 47) !important;
+}
+
 .btn-outline-primary {
   border-color: var(--navbar-color);
   color: var(--navbar-color);
 }
+
 .btn-outline-primary:hover {
   border-color: var(--navbar-color);
   background-color: var(--navbar-color);
 }
+
 /* important tag overrules bootstrap in this case */
 .btn-outline-primary:active {
   border-color: rgba(228, 176, 99, 0.9) !important;
   background-color: rgba(210, 144, 47, 0.9) !important;
 }
 
+/* --------------------------------------------------------------------------- */
 /* RECIPES PAGE */
 .header-list-recipes {
   font-size: 1.5em;
   list-style-type: none;
 }
+
 .card {
   border-radius: 5px;
+  background-color: rgb(240, 196, 131);
 }
-.card-img {
-  border-radius: 5px;
+
+/* --------------------------------------------------------------------------- */
+/* Contact Me */
+#contact-me {
+  color: white;
 }
-.card-background-odd {
-  background-color: rgb(147, 238, 193);
-}
-.card-background-even {
-  background-color: rgb(244, 166, 137);
-}
-/*  */
