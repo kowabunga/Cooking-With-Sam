@@ -7,6 +7,7 @@
 
 :root {
   --navbar-color: rgba(228, 176, 99, 0.9);
+  --navbar-color-not-opaque: rgb(228, 176, 99);
   --navbar-green: rgb(135, 235, 168);
   --navbar-items: #fffffd;
   --navbar-hover: #706f6f;
@@ -16,7 +17,12 @@
 html,
 body {
   background-color: #333;
-  /* height: 100%; */
+  height: 100%;
+}
+
+.main-container {
+  min-height: 100%;
+  padding-bottom: 5rem;
 }
 
 /* --------------------------------------------------------------------------- */
@@ -48,7 +54,7 @@ body {
 /* --------------------------------------------------------------------------- */
 /* FOOTER */
 #footer {
-  position: sticky;
+  position: fixed;
   bottom: 0;
   width: 100%;
   display: flex;
@@ -56,7 +62,7 @@ body {
   justify-content: center;
   font-size: 1.5rem;
   height: 5rem;
-  background-color: rgb(228, 176, 99);
+  background-color: var(--navbar-color-not-opaque);
   color: white;
   padding-bottom: 0;
 }
@@ -93,8 +99,9 @@ body {
 /* --------------------------------------------------------------------------- */
 /* buttons */
 .btn-primary {
-  border-color: rgb(228, 176, 99)!important;
-  background-color: rgb(228, 176, 99)!important;
+  border-color: var(--navbar-color-not-opaque);
+  background-color: var(--navbar-color-not-opaque);
+
 }
 
 .btn-primary:hover {
@@ -103,7 +110,7 @@ body {
 }
 
 .btn-primary:active {
-  border-color: rgb(228, 176, 99) !important;
+  border-color: var(--navbar-color-not-opaque) !important;
   background-color: rgb(210, 144, 47) !important;
 }
 

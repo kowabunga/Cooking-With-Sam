@@ -4,24 +4,16 @@ class UI {
   }
   populateRecipes(meals) {
     let output = [];
-    let ingredients = '';
 
     // if meal recipe does not exist, it returns null. If it does not, fill in the page with recipes. If it does, put out a card saying that it does not exist and try again.
     if (meals !== null) {
-      let i = 0;
-      while (meals[i] !== undefined && i < meals.length) {
-        // It's possible for ingredient and measurement amount to have a value of nothing, or null or undefined on occasion. Take care of this here
-        if (
-          (meals[i][`strIngredient${i}`] !== '' || meals[i][`strMeasure${i}`] !== '') &&
-          (meals[i][`strIngredient${i}`] !== null || meals[i][`strMeasure${i}`] !== null) &&
-          (meals[i][`strIngredient${i}`] !== undefined || meals[i][`strMeasure${i}`] !== undefined)
-        ) {
-          ingredients += `<li>${meals[i][`strIngredient${i}`] + ' - ' + meals[i][`strMeasure${i}`]}</li>`;
-        }
-        i++;
-      }
-
       meals.forEach(meal => {
+        let ingredients = '';
+        // add individual li's containing both ingredients and the measurements for said ingredient to string to append to output card. below
+        for (let i = 1; i <= 20; i++) {
+          if (meal[`strIngredient${i}`] !== '' || meal[`strMeasure${i}`] !== '') ingredients += `<li>${meal[`strIngredient${i}`] + ' - ' + meal[`strMeasure${i}`]}</li>`;
+        }
+        // create card and append meal name, ingredients, and instructions
         output += `
         <div class="col-md-6 mb-4">
             <div class="card h-100">
@@ -44,6 +36,7 @@ class UI {
         `;
       });
       this.row.innerHTML = output;
+      // if meal does not exist
     } else {
       this.row.innerHTML = `        
             <div class="col mb-4">
